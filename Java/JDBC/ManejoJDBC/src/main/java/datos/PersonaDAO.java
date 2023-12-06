@@ -7,6 +7,8 @@ import static datos.Conexion.*;
 import domain.Persona;
 import java.sql.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,11 +18,9 @@ public class PersonaDAO {
 
     //ugalde escribe cada columna pero ambas sentncias obtienen lo mismo
     private static final String SQL_SELECT = "SELECT * FROM persona";
-    private static final String SQL_INSERT = "INSERT INTO persona(nombre, apellido, email,telefono) VALUES("
-            
-            
-            
-    ///////////////////////////MEODO LISTAR////////////////////////////////////
+    private static final String SQL_INSERT = "INSERT INTO persona(nombre, apellido, email, telefono) VALUES(?, ?, ?, ?)";
+
+    ///////////////////////////METODO LISTAR////////////////////////////////////
     //recuerda que list es una clase  de la api coleccions
     //bascamentee son arrays mas sofisticados
     //este metodo ns almacenara todos los objetos tipo personas y retorna
@@ -67,11 +67,11 @@ public class PersonaDAO {
 
         } finally {
             //aqui dentro de finally vamos a cerrar las conexiones
-            //recuerda que este bloque se ejecuta siempre alfinal de un metodo o try catch
+            //recuerda que este bloque se ejecuta siempre alfinal de un metodo try catch
             //los metodos losdefinimos en la clase Conexion
 
             try {
-                //cerramos las conexxiones de manera iversa a como se abrieron
+                //cerramos las conecciones de manera inversa a como se abrieron
 
                 close(rs);
 
@@ -88,18 +88,41 @@ public class PersonaDAO {
 
     /////////////////////////////////////METODO INSERTAR///////////////////////
     public int insertar(Persona persona) {
-        
+
         Connection conn = null;
         PreparedStatement stmt = null;
         int registros = 0;
 
         try {
-
+            //establecemos coneccion
             conn = getConnection();
-            stmt = conn.prepareStatement()
+            //prepare statement con la respectiva sentencia
+            stmt = conn.prepareStatement(SQL_INSERT);
+            //se ejecuta el query, pero usamos set string por que se pasan textos
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getEmail());
+            stmt.setString(4, persona.getTelefono());
+            //en estecaso par ejecutar la sentncia amndamos llamar el metodo
+            //executeUpdate de la clase PreparedStatement, este metodo es diferente
+            //al anterior de select, por  que en este caso la base de datos se modifica
+            //este metodo sin pedos te ejecuta delete, updatee insert
+            //para select el de arriba esta chido nomas
+            registros = stmt.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+                close(conn);
+            } catch (SQLException ex) {
+                ex.printStackTrace(System.out);
+
+            }
+
         }
+        //se retorna la vaariable con el int
+        return registros;
     }
 
 }
