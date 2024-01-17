@@ -7,8 +7,6 @@ import static datos.Conexion.*;
 import domain.Persona;
 import java.sql.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -17,9 +15,12 @@ import java.util.logging.Logger;
 public class PersonaDAO {
 
     //ugalde escribe cada columna pero ambas sentncias obtienen lo mismo
+    //define lassentencias como variables constantes como buena practica
+    
     private static final String SQL_SELECT = "SELECT * FROM persona";
     private static final String SQL_INSERT = "INSERT INTO persona(nombre, apellido, email, telefono) VALUES(?, ?, ?, ?)";
-
+    private static final String SQL_UPDATE = "UPDATE persona SET nombre = ?, apellido = ?, email = ?, telefono = ? WHERE idPersona = ?";
+    private static final String SQL_DELETE = "DELETE FROM persona WHERE idPersona = ?";
     ///////////////////////////METODO LISTAR////////////////////////////////////
     //recuerda que list es una clase  de la api coleccions
     //bascamentee son arrays mas sofisticados
@@ -108,6 +109,77 @@ public class PersonaDAO {
             //al anterior de select, por  que en este caso la base de datos se modifica
             //este metodo sin pedos te ejecuta delete, updatee insert
             //para select el de arriba esta chido nomas
+            registros = stmt.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+                close(conn);
+            } catch (SQLException ex) {
+                ex.printStackTrace(System.out);
+
+            }
+
+        }
+        //se retorna la vaariable con el int
+        return registros;
+    }
+    
+    /////////////////////////////////////METODO UPDATE///////////////////////
+    public int actualizar(Persona persona) {
+
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+
+        try {
+            //establecemos coneccion
+            conn = getConnection();
+            //prepare statement con la respectiva sentencia
+            stmt = conn.prepareStatement(SQL_UPDATE);
+            //se ejecuta el query, pero usamos set string por que se pasan textos
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getEmail());
+            stmt.setString(4, persona.getTelefono());
+            stmt.setInt(5,persona.getIdPersona());
+            //en estecaso par ejecutar la sentncia amndamos llamar el metodo
+            //executeUpdate de la clase PreparedStatement, este metodo es diferente
+            //al anterior de select, por  que en este caso la base de datos se modifica
+            //este metodo sin pedos te ejecuta delete, updatee insert
+            registros = stmt.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+                close(conn);
+            } catch (SQLException ex) {
+                ex.printStackTrace(System.out);
+
+            }
+
+        }
+        //se retorna la vaariable con el int
+        return registros;
+    }
+    
+     /////////////////////////////////////METODO DELETE///////////////////////
+    public int delete(Persona persona) {
+
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+
+        try {
+            //establecemos coneccion
+            conn = getConnection();
+            //prepare statement con la respectiva sentencia
+            stmt = conn.prepareStatement(SQL_DELETE);
+            //se ejecuta el query, pero usamos setiNT por que se pasan ENTEROS
+            stmt.setInt(1,persona.getIdPersona());
+            
             registros = stmt.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);

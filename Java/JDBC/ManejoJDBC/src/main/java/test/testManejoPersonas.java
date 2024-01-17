@@ -44,13 +44,31 @@ public class testManejoPersonas {
         //para insetar todos los datos
         Persona personaAgregar = new Persona("Carlos", "Esparza", "cesparza@gmail.com", "4171064348");
         //mandamos  el objeto a nuestro metodo insertar de la clase personaDAO
-        
+
         personaDao.insertar(personaAgregar);
-        
+
         //LISTAMOS AGAIN
         for (Persona persona : personas) {
             System.out.println("persona = " + persona);
 
         }
+
+        //////////////////////////////////UPDATE////////////////////////////////
+        //SE CREA EL OBJETO DE TIPO PERSONA CON TODOS LOS DATOS NECESARIOS PAARA ACTUALIZAAR
+        Persona personaActualizar = new Persona(4, "Daniela", "Alejandre", "rosadaniela@gmail.com", "417178");
+
+        //DESPUES INVOCAMOS EL METODO AZTUALIZAR ATRAVEZ DE NUESTRO OBJETO personaDAO
+        personaDao.actualizar(personaActualizar);
+
+        //LISTAMOS AGAIN
+        for (Persona persona : personas) {
+            System.out.println("persona = " + persona);
+
+        }
+        
+        ///////////////////////////////DELETE/////////////////////////////////////
+        Persona personaEliminar = new Persona(4);
+        
+        personaDao.delete(personaEliminar);
     }
 }
