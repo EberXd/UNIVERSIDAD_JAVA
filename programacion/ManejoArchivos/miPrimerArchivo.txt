@@ -1,0 +1,3 @@
+hola desde PrintWriter
+Adios desde FileWriter
+La programacion seranuestra salvacion
