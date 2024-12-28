@@ -1,6 +1,15 @@
 domain\Persona.class
+<<<<<<< HEAD
 datos\Conexion.class
 test\testMySqlJDBC.class
 datos\PersonaDAO.class
 IntroduccinJDBC.class
 test\testManejoPersonas.class
+=======
+test\testMySqlJDBC.class
+test\testManejoPersonas.class
+NewClass.class
+datos\Conexion.class
+datos\PersonaDAO.class
+IntroduccinJDBC.class
+>>>>>>> master

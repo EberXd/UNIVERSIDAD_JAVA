@@ -14,9 +14,18 @@
 //tambien se especifica la version de maven
 //para mas informacion revidar el video 1 de introducion a JDBC
 
+<<<<<<< HEAD
 public class IntroduccinJDBC {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 }
+=======
+//public class IntroduccinJDBC {
+//
+//    public static void main(String[] args) {
+//        System.out.println("Hello World!");
+//    } 
+//}
+>>>>>>> master

@@ -28,6 +28,10 @@ public class testMySqlJDBC {
         //y para entender que esto es parte de una conexion
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");  <--- linea que podemos requerir
+<<<<<<< HEAD
+=======
+            //para aplicaicones WEB
+>>>>>>> master
 
             //las siguients clases son del java sql
             //el metodo getConnecion nos solicita la url de arriba

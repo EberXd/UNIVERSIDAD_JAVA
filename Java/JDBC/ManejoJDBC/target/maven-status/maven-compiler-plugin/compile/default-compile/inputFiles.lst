@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\domain\Persona.java
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\test\testMySqlJDBC.java
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\datos\Conexion.java
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\test\testManejoPersonas.java
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\datos\PersonaDAO.java
 D:\curso\Java\JDBC\ManejoJDBC\src\main\java\IntroduccinJDBC.java
+=======
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\test\testMySqlJDBC.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\datos\Conexion.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\NewClass.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\IntroduccinJDBC.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\test\testManejoPersonas.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\datos\PersonaDAO.java
+D:\Proyectos\UNIVERSIDAD_JAVA-master\Java\JDBC\ManejoJDBC\src\main\java\domain\Persona.java
+>>>>>>> master
