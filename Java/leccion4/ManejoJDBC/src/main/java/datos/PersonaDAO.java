@@ -44,7 +44,7 @@ public class PersonaDAO {
     //bascamentee son arrays mas sofisticados
     //este metodo ns almacenara todos los objetos tipo personas y retorna
     //una list con los datos
-    public List<Persona> seleccionar() {
+    public List<Persona> seleccionar() throws SQLException {
         //variables del metodo
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -82,9 +82,6 @@ public class PersonaDAO {
                 //a la lista
                 personas.add(persona);
             }
-
-        } catch (SQLException ex) {
-            ex.printStackTrace(System.out);
 
         } finally {
             //aqui dentro de finally vamos a cerrar las conexiones
