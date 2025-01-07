@@ -6,11 +6,9 @@ import datos.PersonaDAO;
 import domain.Persona;
 import java.sql.Connection;
 import java.sql.*;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-/**
+
+/** 
  *
  * @author eber
  */
@@ -37,7 +35,7 @@ public class testManejoPersonas {
             //para el update
             Persona cambioPersona = new Persona();
 
-            cambioPersona.setIdPersona(2);
+            cambioPersona.setIdPersona(1);
             cambioPersona.setNombre("Rosa Daniela");
             cambioPersona.setApellido("Castro");
             cambioPersona.setEmail("aaaaaaaaaaa");
