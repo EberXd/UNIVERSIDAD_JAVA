@@ -1,0 +1,9 @@
+CREATE DATABASE zona_fit_db
+
+CREATE TABLE cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    membresia VARCHAR(50) NOT NULL
+);
+
