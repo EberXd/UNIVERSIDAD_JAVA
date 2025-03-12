@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4febc34f-7a7d-4f62-aee6-e771097a4202" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Java/JDBC/IntroduccinJDBC/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/JDBC/IntroduccinJDBC/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+    <list default="true" id="1d1984fc-4e05-4594-8f0f-0201eb843756" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../zona_fit/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zona_fit/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,65 +23,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2tP2q9cy9FPZt4T7mIb3fpVd8NA" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2u0h0agPqTqkMDeW54r3ItwRl0C" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ZonaFitApplication.executor": "Run",
+    "Application.Forma.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "git-widget-placeholder": "trabajando",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SadEyes/Documents/NetBeansProjects/UNIVERSIDAD_JAVA/Proyectos con Intellij/zona_fit",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+    "last_opened_file_path": "C:/Users/SadEyes/Documents/NetBeansProjects/UNIVERSIDAD_JAVA/Proyectos con Intellij/Swing_02",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SadEyes\Documents\NetBeansProjects\UNIVERSIDAD_JAVA\zona_fit\src\main\resources" />
+      <recent name="C:\Users\SadEyes\Documents\NetBeansProjects\UNIVERSIDAD_JAVA" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ZonaFitApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gm.zona_fit.ZonaFitApplication" />
-      <module name="zona_fit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gm.zona_fit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Forma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Forma" />
+      <module name="Swing" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ZonaFitApplication" />
+        <item itemvalue="Application.Forma" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4febc34f-7a7d-4f62-aee6-e771097a4202" name="Changes" comment="" />
+      <changelist id="1d1984fc-4e05-4594-8f0f-0201eb843756" name="Changes" comment="" />
       <created>1740239420533</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
