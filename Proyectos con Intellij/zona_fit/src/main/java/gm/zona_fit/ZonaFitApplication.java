@@ -13,8 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
 import java.util.Scanner;
-
-@SpringBootApplication
+//esta notacion es la que activa el springboot
+//@SpringBootApplication
 public class ZonaFitApplication implements CommandLineRunner {
 	//inyeccion de dependecias de la clase antesesora servicio
 	@Autowired
